@@ -1,0 +1,123 @@
+---
+import Container from "./Container.astro"
+import MarketingIcon from '../icons/marketingIcon.astro';
+import WebIcon from '../icons/webIcon.astro';
+import FlechaIcon from '../icons/flechaIcon.astro';
+import CrmIcon from '../icons/crmIcon.astro';
+import ContentIcon from '../icons/contentIcon.astro';
+import ServicesIcon from '../icons/ServicesIcon.astro';
+---
+
+<div id="servicios">
+  <Container>
+    <div class="md:w-2/3 lg:w-1/2">
+     
+      
+      <h2 class="my-8 flex items-center gap-2 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+        Nuestros Servicios
+        <ServicesIcon class="w-7 h-7 text-secondary" />
+      </h2>
+    
+      <p class="text-gray-600 dark:text-gray-300">En nuestra agencia construimos marcas que venden. Combinamos diseño, estrategia y ejecución para lograr resultados reales.<br>
+
+        Creamos contenido visual atractivo, desarrollamos sitios web orientados a la conversión y gestionamos campañas publicitarias efectivas.<br>
+        
+        También implementamos sistemas de venta y CRM personalizados para escalar tu negocio con procesos sólidos y profesionales.</p>
+    </div>
+    <div
+      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
+    >
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+        <MarketingIcon/>
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-fuchsia-500"
+            >
+              Marketing
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Estrategias personalizadas para posicionar tu marca, atraer clientes ideales y aumentar tus ventas con campañas que realmente funcionan.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between text-white hover:text-fuchsia-500 group">
+            <span class="text-sm">Leer más</span>
+            <FlechaIcon/>
+          </a>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <WebIcon/>
+          
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-fuchsia-500"
+>            
+              Desarrollo Web
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Creamos sitios web rápidos, funcionales y optimizados para convertir visitantes en clientes. Diseño profesional con foco en resultados.
+
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between text-white hover:text-fuchsia-500 group">
+            <span class="text-sm">Leer más</span>
+          <FlechaIcon/>
+           
+          </a>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          
+       <ContentIcon/>
+          
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-fuchsia-500"
+            >
+              Creación de Contenido
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Producción audiovisual de alto impacto: filmamos, editamos y diseñamos piezas visuales que capturan atención y comunican valor.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between text-white hover:text-fuchsia-500 group">
+            <span class="text-sm">Leer más</span>
+            <FlechaIcon/>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="group relative bg-gray-50 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
+      >
+        <div
+          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
+        >
+          
+       <CrmIcon/>
+        
+                  <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-fuchsia-500"
+            >
+              CRM & Automatizaciones
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              Implementamos sistemas inteligentes para gestionar tus ventas, automatizar procesos y escalar tu negocio con eficiencia real.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between text-white hover:text-fuchsia-500 group">
+            <span class="text-sm">Leer más</span>
+            <FlechaIcon/>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
