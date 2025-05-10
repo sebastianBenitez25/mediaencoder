@@ -1,5 +1,37 @@
 ---
 import Container from "./Container.astro"
+import avatar1 from "../images/avatar1.webp";
+import avatar2 from "../images/avatar2.webp";
+import avatar3 from "../images/avatar3.webp";
+import avatar4 from "../images/avatar4.webp";
+import { Image } from "astro:assets";
+
+const testimonials = [
+  {
+    name: "Gastón Mouriño",
+    role: "CEO Team Brutus Handball",
+    avatar: avatar2,
+    text: "Desde que empecé a trabajar con Media Encoder logré dar un giro de 360 al estado de mi empresa y me encuentro muy contento ya que actualmente se encuentra en constante crecimiento y desarrollo."
+  },
+  {
+    name: "Natalia Cieplicki",
+    role: "Content Creator Psicología/Culturismo",
+    avatar: avatar4,
+    text: "Siempre quise iniciar en la creación de contenido y el equipo de Media Encoder me dio la confianza y comodidad para poder iniciarme con mi marca personal."
+  },
+  {
+    name: "Federico Vieyra",
+    role: "CEO 3tresagencia Agencia deportiva",
+    avatar: avatar1,
+    text: "Necesitaba a alguien que se especializara en el diseño y creación de contenido y lo mejor que pude haber hecho es contactarme con el equipo de diseño de Media Encoder."
+  },
+  {
+    name: "Oscar Lobo",
+    role: "Content Creator Culturismo",
+    avatar: avatar3,
+    text: "Quería iniciar en el mundo de creación de contenido, pero no tenía quien me acompañara y me guie para hacerlo de la manera profesional. Los contacté a ustedes y hoy por hoy ya cuento con +50k de seguidores y con marcas que me sponsorean."
+  }
+];
 ---
 
 <div class="text-gray-600 dark:text-gray-300" id="reviews">
@@ -10,47 +42,18 @@ import Container from "./Container.astro"
       </h2>
     </div>
     <div class="md:columns-2 lg:columns-2 gap-8 space-y-8">
-      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex gap-4">
-          <img class="w-12 h-12 rounded-full" src="./images/avatars/avatar2.webp" alt="user avatar" width="400" height="400" loading="lazy">
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Gastón Mouriño</h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">CEO Team Brutus Handball</p>
+      {testimonials.map(({ name, role, avatar, text }) => (
+        <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+          <div class="flex gap-4">
+            <Image class="w-12 h-12 rounded-full" src={avatar} alt={name} />
+            <div>
+              <h6 class="text-lg font-medium text-gray-700 dark:text-white">{name}</h6>
+              <p class="text-sm text-gray-500 dark:text-gray-300">{role}</p>
+            </div>
           </div>
+          <p class="mt-6">{text}</p>
         </div>
-        <p class="mt-6">Desde que empecé a trabajar con Media Encoder logré dar un giro de 360 al estado de mi empresa y me encuentro muy contento ya que actualmente se encuentra en constante crecimiento y desarrollo.</p>
-      </div>
-      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex gap-4">
-          <img class="w-12 h-12 rounded-full" src="./images/avatars/avatar4.webp" alt="user avatar" width="200" height="200" loading="lazy">
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Natalia Cieplicki</h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Content Creator Psicología/Culturismo</p>
-          </div>
-        </div>
-        <p class="mt-6"> Siempre quise iniciar en la creación de contenido y el equipo de Media Encoder me dio la confianza y comodidad para poder iniciarme con mi marca personal.</p>
-      </div>
-      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex gap-4">
-          <img class="w-12 h-12 rounded-full" src="./images/avatars/avatar1.webp" alt="CEO 3tresagencia Agencia deportiva" width="200" height="200" loading="lazy">
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Federico Vieyra</h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">CEO 3tresagencia Agencia deportiva</p>
-          </div>
-        </div>
-        <p class="mt-6">Necesitaba a alguien que se especializara en el diseño y creación de contenido y lo mejor que pude haber hecho es contactarme con el equipo de diseño de Media Encoder.</p>
-      </div>
-      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex gap-4">
-          <img class="w-12 h-12 rounded-full" src="./images/avatars/avatar3.webp" alt="user avatar" width="200" height="200" loading="lazy">
-          <div>
-            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Oscar Lobo</h6>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Content Creator Culturismo</p>
-          </div>
-        </div>
-        <p class="mt-6">Quería iniciar en el mundo de creación de contenido, pero no tenía quien me acompañara y me guie para hacerlo de la manera profesional. Los contacté a ustedes y hoy por hoy ya cuento con +50k de seguidores y con marcas que me sponsorean.</p>
-      </div>
-      
+      ))}
     </div>
   </Container>
 </div>

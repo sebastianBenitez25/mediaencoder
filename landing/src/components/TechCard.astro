@@ -1,0 +1,14 @@
+---
+// Props: icon, name
+const { icon: Icon, name } = Astro.props;
+---
+<div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
+      <Icon class="w-8 h-8" />
+    </div>
+    <div>
+      <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{name}</h6>
+    </div>
+  </div>
+</div>

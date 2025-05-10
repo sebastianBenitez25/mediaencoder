@@ -1,119 +1,36 @@
 ---
-import AeIcon from "../icons/AeIcon.astro";
-import AstroIcon from "../icons/AstroIcon.astro";
-import IllustratorIcon from "../icons/IllustratorIcon.astro";
-import PremiereIcon from "../icons/PremiereIcon.astro";
-import PsIcon from "../icons/PsIcon.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import Wordpress from "../icons/Wordpress.astro";
 import Container from "./Container.astro";
 import ServicesIcon from "../icons/ServicesIcon.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Wordpress from "../icons/Wordpress.astro";
+import PsIcon from "../icons/PsIcon.astro";
+import AeIcon from "../icons/AeIcon.astro";
+import IllustratorIcon from "../icons/IllustratorIcon.astro";
 import HubSpotIcon from "../icons/hubspotIcon.astro";
 import OpenAI from "../icons/OpenAI.astro";
+import TechCard from "./TechCard.astro";
+
+const techStack = [
+  { icon: AstroIcon, name: "Astro" },
+  { icon: Tailwind, name: "Tailwind CSS" },
+  { icon: Wordpress, name: "Wordpress" },
+  { icon: PsIcon, name: "Adobe Photoshop" },
+  { icon: AeIcon, name: "Adobe After Effects" },
+  { icon: IllustratorIcon, name: "Adobe Illustrator" },
+  { icon: HubSpotIcon, name: "HubSpot" },
+  { icon: OpenAI, name: "OpenAI" },
+];
 ---
-
-<Container >
- 
-
-
-<h2 class="my-8 flex items-center gap-2 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl" id="tecnologias">
+<Container>
+  <h2 class="my-8 flex items-center gap-2 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl" id="tecnologias">
     Tecnologías con las que trabajamos
     <ServicesIcon class="w-7 h-7 text-secondary" />
   </h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-   
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <AstroIcon class="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Astro</h6>
-          </div>
-        </div>
-      </div>
 
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <Tailwind class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Tailwind CSS</h6>
-          </div>
-        </div>
- </div>
-
-
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <Wordpress class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Wordpress</h6>
-          </div>
-        </div>
-      </div>
-
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <PsIcon class="w-8 h-8 text-red-500 dark:text-red-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Adobe Photoshop</h6>
-          </div>
-        </div>
-      </div>
-
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <AeIcon class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Adobe After Effects</h6>
-          </div>
-        </div>
-      </div>
-
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <IllustratorIcon class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Adobe Illustrator</h6>
-          </div>
-        </div>
-      </div>
-      <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <HubSpotIcon class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-            
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">HubSpot</h6>
-          </div>
-        </div>
-    </div>
-
-    <div class="p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-full">
-            <OpenAI class="w-8 h-8 text-blue-500 dark:text-blue-400" />
-            
-          </div>
-          <div>
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">OpenAI</h6>
-          </div>
-        </div>
-    </div>
-   
-
-
-</div>
-
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    {techStack.map(({ icon, name }) => (
+      <TechCard icon={icon} name={name} />
+    ))}
+  </div>
 </Container>

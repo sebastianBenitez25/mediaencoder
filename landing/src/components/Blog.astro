@@ -1,59 +1,54 @@
 ---
-import Container from "./Container.astro"
+import Container from "./Container.astro";
+import ShieldIcon from "../icons/ShieldIcon.astro";
+import NetworkIcon from "../icons/NetworkIcon.astro";
+import Meta from "../icons/MetaIcon.astro";
 
+const items = [
+  {
+    title: "Tu web no puede ser una tarjeta de presentación.",
+    description: "Creamos páginas que venden y conectamos todo con un CRM para automatizar tus ventas.",
+    Icon: ShieldIcon
+  },
+  {
+    title: "Contenido estratégico con apoyo de IA.",
+    description: "Creamos piezas que informan, convierten y nutren. Potenciadas con herramientas como OpenAI.",
+    Icon: NetworkIcon
+  },
+  {
+    title: "Diseño humano con resultados reales.",
+    description: "Creamos experiencias memorables que reflejan tu esencia y generan impacto.",
+    Icon: Meta
+  }
+];
 ---
 
 <div id="blog">
   <Container>
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">Todo lo que necesitás, en un solo equipo</h2>
-        
-      </div>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-           
-            <svg class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" fill="#ffffff" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M445.06,154.352C410.115,77.368,333.233,26.827,248.63,25.425c-87.761-1.454-167.512,49.093-203.714,128.93 C19.6,157.729,0,179.451,0,205.675v78.647c0,26.227,19.604,47.95,44.924,51.321C80.517,414.166,158.449,464.605,245,464.605 c86.558,0,164.489-50.435,200.077-128.963c25.319-3.371,44.923-25.094,44.923-51.32v-78.647 C490,179.443,470.387,157.716,445.06,154.352z M248.32,44.113c74.364,1.232,142.218,43.957,175.786,109.772H65.871 C100.599,85.593,171.068,42.833,248.32,44.113z M245,445.915c-76.138,0-144.986-42.66-179.12-109.803h358.24 C389.989,403.255,321.144,445.915,245,445.915z M471.31,284.322c0,18.252-14.848,33.1-33.1,33.1H51.79 c-18.252,0-33.1-14.848-33.1-33.1v-78.647c0-18.252,14.848-33.1,33.1-33.1h386.42c18.252,0,33.1,14.848,33.1,33.1V284.322z"></path> <polygon points="135.931,258.049 120.134,209.152 98.323,209.152 82.526,258.049 66.729,209.152 43.403,209.152 70.936,290.094 94.252,290.094 109.302,246.011 124.195,290.094 147.667,290.094 175.2,209.152 151.728,209.152 "></polygon> <polygon points="271.634,258.049 255.837,209.152 234.026,209.152 218.228,258.049 202.432,209.152 179.106,209.152 206.639,290.094 229.955,290.094 245.005,246.011 259.898,290.094 283.369,290.094 310.903,209.152 287.431,209.152 "></polygon> <polygon points="407.337,258.049 391.539,209.152 369.729,209.152 353.931,258.049 338.135,209.152 314.809,209.152 342.342,290.094 365.658,290.094 380.708,246.011 395.601,290.094 419.072,290.094 446.605,209.152 423.134,209.152 "></polygon> </g> </g></svg>          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              Tu web no puede ser una tarjeta de presentación.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Creamos páginas que venden y conectamos todo con un CRM para automatizar tus ventas.
-            </p>
-            
+    <div class="mb-12 space-y-2 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
+        Todo lo que necesitás, en un solo equipo
+      </h2>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        items.map(({ title, description, Icon }) => (
+          <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:bg-gray-800 dark:border-gray-700 bg-opacity-50 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+            <div class="relative overflow-hidden rounded-xl">
+              <Icon />
+            </div>
+            <div class="mt-6">
+              <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+                {title}
+              </h3>
+              <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+                {description}
+              </p>
+            </div>
           </div>
-          
-        </div>
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-            <svg class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#ffffff" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="34.52" cy="11.43" r="5.82"></circle><circle cx="53.63" cy="31.6" r="5.82"></circle><circle cx="34.52" cy="50.57" r="5.82"></circle><circle cx="15.16" cy="42.03" r="5.82"></circle><circle cx="15.16" cy="19.27" r="5.82"></circle><circle cx="34.51" cy="29.27" r="4.7"></circle><line x1="20.17" y1="16.3" x2="28.9" y2="12.93"></line><line x1="38.6" y1="15.59" x2="49.48" y2="27.52"></line><line x1="50.07" y1="36.2" x2="38.67" y2="46.49"></line><line x1="18.36" y1="24.13" x2="30.91" y2="46.01"></line><line x1="20.31" y1="44.74" x2="28.7" y2="48.63"></line><line x1="17.34" y1="36.63" x2="31.37" y2="16.32"></line><line x1="20.52" y1="21.55" x2="30.34" y2="27.1"></line><line x1="39.22" y1="29.8" x2="47.81" y2="30.45"></line><line x1="34.51" y1="33.98" x2="34.52" y2="44.74"></line></g></svg>
-          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              Contenido estratégico con apoyo de IA.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Creamos piezas que informan, convierten y nutren. Potenciadas con herramientas como OpenAI.
-            </p>
-           
-          </div>
-          
-        </div>
-        <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
-          <div class="relative overflow-hidden rounded-xl">
-            <svg class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" fill="#ffffff" viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M5,19.5c0-4.6,2.3-9.4,5-9.4c1.5,0,2.7,0.9,4.6,3.6c-1.8,2.8-2.9,4.5-2.9,4.5c-2.4,3.8-3.2,4.6-4.5,4.6 C5.9,22.9,5,21.7,5,19.5 M20.7,17.8L19,15c-0.4-0.7-0.9-1.4-1.3-2c1.5-2.3,2.7-3.5,4.2-3.5c3,0,5.4,4.5,5.4,10.1 c0,2.1-0.7,3.3-2.1,3.3S23.3,22,20.7,17.8 M16.4,11c-2.2-2.9-4.1-4-6.3-4C5.5,7,2,13.1,2,19.5c0,4,1.9,6.5,5.1,6.5 c2.3,0,3.9-1.1,6.9-6.3c0,0,1.2-2.2,2.1-3.7c0.3,0.5,0.6,1,0.9,1.6l1.4,2.4c2.7,4.6,4.2,6.1,6.9,6.1c3.1,0,4.8-2.6,4.8-6.7 C30,12.6,26.4,7,22.1,7C19.8,7,18,8.8,16.4,11"></path></g></svg>          </div>
-          <div class="mt-6 relative">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-              Anuncios que no queman tu presupuesto.
-            </h3>
-            <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
-              Lanzamos campañas en Meta, Google y más. Medimos, optimizamos y escalamos.
-            </p>
-           
-          </div>
-          
-        </div>
-      </div>
+        ))
+      }
+    </div>
   </Container>
 </div>
