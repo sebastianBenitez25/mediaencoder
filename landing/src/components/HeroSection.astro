@@ -4,7 +4,7 @@ import Container from "./Container.astro";
 
 <div class="relative overflow-hidden" id="inicio">
   <!-- Fondo decorativo optimizado -->
-  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-80 dark:opacity-80 will-change-transform">
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-80 will-change-transform">
     <div class="blur-[106px] h-56 bg-gradient-to-br from-fuchsia-500 to-black"></div>
     <div class="blur-[106px] h-32 bg-gradient-to-r from-fuchsia-500 to-black"></div>
   </div>
@@ -12,10 +12,10 @@ import Container from "./Container.astro";
   <Container>
     <div class="relative pt-36">
       <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl leading-tight">
-          MEDIA ENCODER<span class="text-primary dark:text-white">.</span>
+        <h1 class="text-white font-bold text-5xl md:text-6xl xl:text-7xl leading-tight">
+          MEDIA ENCODER<span class="text-primary">.</span>
         </h1>
-        <p class="mt-6 text-lg text-gray-700 dark:text-gray-300">
+        <p class="mt-6 text-lg text-gray-300">
           Posicionamos lo que otros apenas publican.
         </p>
 
@@ -30,19 +30,32 @@ import Container from "./Container.astro";
           </a>
         </div>
 
-        <div class="hidden sm:flex justify-between border-y border-gray-100 dark:border-gray-800 mt-10 py-6">
-          <div class="text-left">
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">
+        <!-- Textos con íconos profesionales y responsive -->
+        <div class="flex flex-col sm:flex-row justify-center gap-y-4 sm:gap-y-0 sm:gap-x-12 border-y border-gray-700 mt-10 py-6 text-center sm:text-left">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <!-- Icono chip IA -->
+            <svg class="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 2h-2v2h2V2zm6 6V6h-2v2h2zm-2 14h2v-2h-2v2zM5 6H3v2h2V6zm2 14h2v-2H7v2zm12-8a1 1 0 00-1-1h-1V9a1 1 0 00-1-1h-2V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v2H9a1 1 0 00-1 1v2H7a1 1 0 00-1 1v2h2v2a1 1 0 001 1h2v2a1 1 0 001 1h2a1 1 0 001-1v-2h2a1 1 0 001-1v-2h2v-2h-2v-2z"/>
+            </svg>
+            <h6 class="text-lg font-semibold text-white">
               Automatizamos tu marketing con IA.
             </h6>
           </div>
-          <div class="text-left">
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <!-- Icono gráfico de estrategia -->
+            <svg class="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3 17h2v2H3v-2zm0-4h4v6H3v-6zm6-4h4v10H9V9zm6-4h4v14h-4V5zm6 8h2v6h-2v-6z"/>
+            </svg>
+            <h6 class="text-lg font-semibold text-white">
               Menos tareas, más estrategia.
             </h6>
           </div>
-          <div class="text-left">
-            <h6 class="text-lg font-semibold text-gray-700 dark:text-white">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <!-- Icono engranaje / automatización -->
+            <svg class="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12 4a1 1 0 01.993.883L13 5v1.07a7.001 7.001 0 014.596 4.595H19a1 1 0 01.117 1.993L19 12h-1.07a7.001 7.001 0 01-4.595 4.596V19a1 1 0 01-1.993.117L11 19v-1.07A7.001 7.001 0 016.404 13H5a1 1 0 01-.117-1.993L5 11h1.07A7.001 7.001 0 0111 6.404V5a1 1 0 011-1zm0 5a3 3 0 100 6 3 3 0 000-6z" clip-rule="evenodd" />
+            </svg>
+            <h6 class="text-lg font-semibold text-white">
               Dejá el trabajo manual atrás.
             </h6>
           </div>

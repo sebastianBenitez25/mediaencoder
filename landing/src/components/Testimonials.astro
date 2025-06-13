@@ -4,6 +4,7 @@ import avatar1 from "../images/avatar1.webp";
 import avatar2 from "../images/avatar2.webp";
 import avatar3 from "../images/avatar3.webp";
 import avatar4 from "../images/avatar4.webp";
+import avatar5 from "../images/avatar5.webp";
 import { Image } from "astro:assets";
 
 const testimonials = [
@@ -30,28 +31,47 @@ const testimonials = [
     role: "Content Creator Culturismo",
     avatar: avatar3,
     text: "Quería iniciar en el mundo de creación de contenido, pero no tenía quien me acompañara y me guie para hacerlo de la manera profesional. Los contacté a ustedes y hoy por hoy ya cuento con +50k de seguidores y con marcas que me sponsorean."
+  },
+  {
+    name: "KUFO Argentina",
+    role: "Empresa de utensilios de cocina",
+    avatar: avatar5,
+    text: "Con su ayuda logramos automatizar nuestras ventas, optimizar nuestros procesos y hacer crecer nuestra comunidad. Pasamos de vender de forma informal a tener una estrategia digital clara, con campañas, seguimiento y presencia real en redes. Hoy nuestros productos llegan a todo el país."
   }
 ];
 ---
 
-<div class="text-gray-600 dark:text-gray-300" id="reviews">
+<div id="reviews">
   <Container>
     <div class="mb-20 space-y-4 px-6 md:px-0">
-      <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+      <h2 class="text-center text-2xl font-bold text-white md:text-4xl">
         Nuestros clientes
       </h2>
     </div>
-    <div class="md:columns-2 lg:columns-2 gap-8 space-y-8">
-      {testimonials.map(({ name, role, avatar, text }) => (
-        <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map(({ name, role, avatar, text }, i) => (
+        <div
+          class={`aspect-auto p-8 border border-gray-700 rounded-3xl bg-gray-800 shadow-2xl shadow-gray-600/10 text-white ${
+            testimonials.length % 2 === 1 && i === testimonials.length - 1
+              ? "sm:col-span-2 sm:mx-auto lg:col-span-1"
+              : ""
+          }`}
+        >
           <div class="flex gap-4">
-            <Image class="w-12 h-12 rounded-full" src={avatar} alt={name} />
+            <Image
+              class="w-12 h-12 rounded-full object-cover"
+              src={avatar}
+              alt={name}
+              width={96}
+              height={96}
+            />
             <div>
-              <h6 class="text-lg font-medium text-gray-700 dark:text-white">{name}</h6>
-              <p class="text-sm text-gray-500 dark:text-gray-300">{role}</p>
+              <h6 class="text-lg font-medium text-white">{name}</h6>
+              <p class="text-sm text-gray-300">{role}</p>
             </div>
           </div>
-          <p class="mt-6">{text}</p>
+          <p class="mt-6 text-gray-200">{text}</p>
         </div>
       ))}
     </div>
